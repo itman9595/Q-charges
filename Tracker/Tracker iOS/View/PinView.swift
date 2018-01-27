@@ -16,7 +16,7 @@ class PinView: MKAnnotationView {
             
             if let imageName = pin.imageName {
                 let pinImage = UIImage(named: imageName)
-                let size = CGSize(width: 30, height: 30)
+                let size = CGSize(width: pin.width!, height: pin.height!)
                 UIGraphicsBeginImageContext(size)
                 pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
                 let resizedImage = UIGraphicsGetImageFromCurrentImageContext()

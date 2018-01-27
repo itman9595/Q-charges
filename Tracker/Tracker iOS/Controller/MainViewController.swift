@@ -20,8 +20,11 @@ class MainViewController: UIViewController {
     var locationManager: CLLocationManager!
     var prevLocation: CLLocation?
     var started: Bool!
+    var isMoving: Bool = false
     var moveColors = [UIColor.red, .blue, .green]
     var overlayColor: UIColor!
+    var timer: Timer!
+    var seconds = 0
     
     var scene: StarterScene!
     var starterBtn: SKShapeNode!

@@ -23,6 +23,11 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.mapType = MKMapType(rawValue: 0)!
         mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        if #available(iOS 11.0, *) {
+            mapView.register(PinView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func askForPermissions() {
@@ -39,12 +44,7 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         checkSpeed()
         
         if (!started) {
-            let artwork = Pin(type: "start", coordinate: locations[0].coordinate)
-            if #available(iOS 11.0, *) {
-                mapView.register(PinView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-            } else {
-                // Fallback on earlier versions
-            }
+            let artwork = Pin(type: "start", coordinate: locations[0].coordinate, width: 30, height: 30)
             mapView.addAnnotation(artwork)
         }
         
@@ -56,6 +56,7 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
             self.mapView.add(polyline)
             
             started = true
+            isMoving = true
         }
         
         prevLocation = locations[0]
@@ -80,11 +81,31 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         if (speed * 3.6 >= 10 && speed * 3.6 <= 40) {
             overlayColor = moveColors[1]
         } else
-        if (speed * 3.6 >= 60) {
+        if (speed * 3.6 > 40) {
             overlayColor = moveColors[0]
             
         } else {
             overlayColor = moveColors[2]
         }
+        
+        if (speed == 0) {
+            isMoving = false
+            
+            seconds = 0
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        } else {
+            if (seconds > 60) {
+                let waitRate = (CGFloat)(seconds / 60) * 0.3
+                
+                let artwork = Pin(type: "camp", coordinate: (prevLocation?.coordinate)!, width: 30 + waitRate, height: 30 + waitRate)
+                mapView.addAnnotation(artwork)
+            }
+            
+             seconds = 0
+        }
+    }
+    
+    @objc func updateTimer() {
+        seconds += 1
     }
 }
