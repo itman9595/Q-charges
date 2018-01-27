@@ -30,6 +30,8 @@
 		B245CB66201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
 		B245CB78201C5429005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB77201C5429005E533A /* MainViewController.swift */; };
 		B245CB80201C560E005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB7F201C560E005E533A /* MainViewController.swift */; };
+		B245CB82201C59A2005E533A /* Launcher.sks in Resources */ = {isa = PBXBuildFile; fileRef = B245CB81201C59A2005E533A /* Launcher.sks */; };
+		B245CB84201C5FEA005E533A /* StarterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB83201C5FEA005E533A /* StarterScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		B245CB5D201C51BE005E533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B245CB77201C5429005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B245CB7F201C560E005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B245CB81201C59A2005E533A /* Launcher.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Launcher.sks; sourceTree = "<group>"; };
+		B245CB83201C5FEA005E533A /* StarterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 			children = (
 				B245CB30201C51BD005E533A /* Main.storyboard */,
 				B245CB33201C51BD005E533A /* LaunchScreen.storyboard */,
+				B245CB81201C59A2005E533A /* Launcher.sks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			children = (
 				B245CB77201C5429005E533A /* MainViewController.swift */,
 				B245CB2E201C51BD005E533A /* GameViewController.swift */,
+				B245CB83201C5FEA005E533A /* StarterScene.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				B245CB32201C51BD005E533A /* Main.storyboard in Resources */,
 				B245CB35201C51BD005E533A /* LaunchScreen.storyboard in Resources */,
 				B245CB64201C51BE005E533A /* Assets.xcassets in Resources */,
+				B245CB82201C59A2005E533A /* Launcher.sks in Resources */,
 				B245CB61201C51BE005E533A /* Art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +429,7 @@
 				B245CB5E201C51BE005E533A /* GameController.swift in Sources */,
 				B245CB2D201C51BD005E533A /* AppDelegate.swift in Sources */,
 				B245CB78201C5429005E533A /* MainViewController.swift in Sources */,
+				B245CB84201C5FEA005E533A /* StarterScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

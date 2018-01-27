@@ -18,12 +18,22 @@
                     <view key="view" contentMode="scaleToFill" id="dQi-rG-J4J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HC8-Jq-I0r" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.062745098039215685" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Bwo-ew-J0m"/>
                     </view>
+                    <connections>
+                        <outlet property="skview" destination="HC8-Jq-I0r" id="Iyv-Pk-QXa"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-371" y="-54"/>
+            <point key="canvasLocation" x="-372" y="-54.422788605697157"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
