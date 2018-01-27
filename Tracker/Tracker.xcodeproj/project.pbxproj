@@ -29,6 +29,7 @@
 		B245CB65201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
 		B245CB66201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
 		B245CB78201C5429005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB77201C5429005E533A /* MainViewController.swift */; };
+		B245CB80201C560E005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB7F201C560E005E533A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		B245CB5B201C51BE005E533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B245CB5D201C51BE005E533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B245CB77201C5429005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B245CB7F201C560E005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,11 +161,9 @@
 		B245CB2B201C51BD005E533A /* Tracker iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B245CB2C201C51BD005E533A /* AppDelegate.swift */,
-				B245CB77201C5429005E533A /* MainViewController.swift */,
-				B245CB2E201C51BD005E533A /* GameViewController.swift */,
-				B245CB30201C51BD005E533A /* Main.storyboard */,
-				B245CB33201C51BD005E533A /* LaunchScreen.storyboard */,
+				B245CB79201C5585005E533A /* Modal */,
+				B245CB7A201C558E005E533A /* View */,
+				B245CB7B201C5594005E533A /* Controller */,
 				B245CB36201C51BD005E533A /* Info.plist */,
 			);
 			path = "Tracker iOS";
@@ -191,12 +191,63 @@
 		B245CB55201C51BE005E533A /* Tracker macOS */ = {
 			isa = PBXGroup;
 			children = (
-				B245CB56201C51BE005E533A /* AppDelegate.swift */,
-				B245CB58201C51BE005E533A /* GameViewController.swift */,
-				B245CB5A201C51BE005E533A /* Main.storyboard */,
+				B245CB7C201C55D4005E533A /* Model */,
+				B245CB7D201C55D8005E533A /* View */,
+				B245CB7E201C55E2005E533A /* Controller */,
 				B245CB5D201C51BE005E533A /* Info.plist */,
 			);
 			path = "Tracker macOS";
+			sourceTree = "<group>";
+		};
+		B245CB79201C5585005E533A /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB2C201C51BD005E533A /* AppDelegate.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		B245CB7A201C558E005E533A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB30201C51BD005E533A /* Main.storyboard */,
+				B245CB33201C51BD005E533A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B245CB7B201C5594005E533A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB77201C5429005E533A /* MainViewController.swift */,
+				B245CB2E201C51BD005E533A /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B245CB7C201C55D4005E533A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB56201C51BE005E533A /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B245CB7D201C55D8005E533A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB5A201C51BE005E533A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B245CB7E201C55E2005E533A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B245CB7F201C560E005E533A /* MainViewController.swift */,
+				B245CB58201C51BE005E533A /* GameViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +442,7 @@
 				B245CB59201C51BE005E533A /* GameViewController.swift in Sources */,
 				B245CB60201C51BE005E533A /* GameController.swift in Sources */,
 				B245CB57201C51BE005E533A /* AppDelegate.swift in Sources */,
+				B245CB80201C560E005E533A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
