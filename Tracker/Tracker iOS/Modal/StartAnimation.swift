@@ -74,6 +74,7 @@ extension MainViewController {
                 UIView.animate(withDuration: 0.5, animations: {
                     self.skview.alpha = 0
                 } , completion: { stopped in
+                    self.tabBarController?.tabBar.isHidden = false
                     self.skview.isHidden = true
                     node.setScale(2)
                     self.starterBtn.fillColor = self.starterBtnColor

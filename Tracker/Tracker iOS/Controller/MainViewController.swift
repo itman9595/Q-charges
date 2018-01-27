@@ -24,11 +24,14 @@ class MainViewController: UIViewController {
     var moveColors = [UIColor.red, .blue, .green]
     var overlayColor: UIColor!
     var timer: Timer!
-    var seconds = 0
+    var stayTime = 0
+    var moveTime = 0
     
     var scene: StarterScene!
     var starterBtn: SKShapeNode!
     var starterBtnColor: UIColor!
+    
+    var userDefault = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()

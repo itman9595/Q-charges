@@ -30,10 +30,11 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         }
         
         startTimer()
+        updateData()
     }
     
     func startTimer() {
-        seconds = 0
+        stayTime = 0
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
@@ -63,6 +64,7 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
             self.mapView.add(polyline)
             
             started = true
+            updateDistance(prevCoord: oldCoordinate, curCoord: locations[0])
         }
         
         prevLocation = locations[0]
@@ -86,10 +88,32 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         location.mapItem().openInMaps(launchOptions: launchOptions)
     }
     
+    func updateData() {
+        userDefault.set(0, forKey: "Distance")
+        userDefault.set(0, forKey: "AvgSpeed")
+        userDefault.set(0, forKey: "MaxSpeed")
+        userDefault.set(300, forKey: "MinSpeed")
+        userDefault.set(0, forKey: "StayTime")
+        userDefault.set(0, forKey: "MoveTime")
+    }
+    func updateDistance(prevCoord: CLLocation, curCoord: CLLocation) {
+        let distance = prevCoord.distance(from: curCoord)
+        let prevDIstance = userDefault.value(forKey: "Distance") as? Double
+        userDefault.set(prevDIstance! + distance, forKey: "Distance")
+    }
+    func updateStayTime() {
+        let seconds = userDefault.integer(forKey: "StayTime")
+        userDefault.set(seconds + stayTime, forKey: "StayTime")
+    }
+    func updateMoveTime() {
+        let seconds = userDefault.integer(forKey: "MoveTime")
+        userDefault.set(seconds + moveTime, forKey: "MoveTime")
+    }
+    
     func checkSpeed() {
         var speed: CLLocationSpeed = CLLocationSpeed()
         speed = locationManager.location!.speed
-        //speedLabel.text = String(format: "%.0f km/h", speed * 3.6)
+        speedLabel.text = String(format: "%.0f km/h", userDefault.double(forKey: "MaxSpeed") * 3.6)
         
         if (speed * 3.6 >= 10 && speed * 3.6 <= 40) {
             overlayColor = moveColors[1]
@@ -104,22 +128,38 @@ extension MainViewController: CLLocationManagerDelegate,MKMapViewDelegate {
         if (speed == 0) {
             isMoving = false
         } else {
-            if (seconds > 60 && !isMoving) {
-                var waitRate = (CGFloat)(seconds / 60) * 0.3
+            if (stayTime > 60 && !isMoving) {
+                var waitRate = (CGFloat)(stayTime / 60) * 0.3
                 if (waitRate > 10) { waitRate = 10 }
 
-                let artwork = Pin(type: "camp", coordinate: (prevLocation?.coordinate)!, width: 30 + waitRate, height: 30 + waitRate, stayTime: seconds / 60)
+                let artwork = Pin(type: "camp", coordinate: (prevLocation?.coordinate)!, width: 30 + waitRate, height: 30 + waitRate, stayTime: stayTime / 60)
                 mapView.addAnnotation(artwork)
+                
+                updateStayTime()
             }
             
-            seconds = 0
+            stayTime = 0
             isMoving = true
-            
+            calculateSpeed(curSpeed: speed)
         }
     }
     
+    func calculateSpeed(curSpeed: CLLocationSpeed) {
+        var maxSpeed = userDefault.value(forKey: "MaxSpeed") as? Double
+        var minSpeed = userDefault.value(forKey: "MinSpeed") as? Double
+        
+        if (curSpeed > maxSpeed!) { maxSpeed = curSpeed }
+        if (curSpeed < minSpeed! && curSpeed != 0) { minSpeed = curSpeed }
+        
+        let avgSpeed = (maxSpeed! + minSpeed!) / 2
+        userDefault.set(avgSpeed, forKey: "AvgSpeed")
+        userDefault.set(maxSpeed, forKey: "MaxSpeed")
+        userDefault.set(minSpeed, forKey: "MinSpeed")
+    }
+    
     @objc func updateTimer() {
-        seconds += 1
-        speedLabel.text = "\(seconds)"
+        stayTime += 1
+        moveTime += 1
+        updateMoveTime()
     }
 }
