@@ -12,7 +12,9 @@ import SceneKit
 class MainViewController: NSViewController {
     
     override func viewDidLoad() {
+        @IBOutlet weak var mapView: MKMapView!
         super.viewDidLoad()
         
     }
 }
+@IBOutlet weak var mapView: MKMapView!

@@ -32,6 +32,12 @@
 		B245CB80201C560E005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB7F201C560E005E533A /* MainViewController.swift */; };
 		B245CB82201C59A2005E533A /* Launcher.sks in Resources */ = {isa = PBXBuildFile; fileRef = B245CB81201C59A2005E533A /* Launcher.sks */; };
 		B245CB84201C5FEA005E533A /* StarterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB83201C5FEA005E533A /* StarterScene.swift */; };
+		DDCF9C50201C83100087F1EB /* StartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF9C4F201C83100087F1EB /* StartAnimation.swift */; };
+		DDCF9C53201C88020087F1EB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCF9C52201C88020087F1EB /* MapKit.framework */; };
+		DDCF9C55201C880B0087F1EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCF9C54201C880B0087F1EB /* CoreLocation.framework */; };
+		DDCF9C57201C884B0087F1EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF9C56201C884B0087F1EB /* Map.swift */; };
+		DDCF9C59201C922B0087F1EB /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF9C58201C922B0087F1EB /* Pin.swift */; };
+		DDCF9C5B201C96E10087F1EB /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF9C5A201C96E10087F1EB /* PinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +108,12 @@
 		B245CB7F201C560E005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B245CB81201C59A2005E533A /* Launcher.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Launcher.sks; sourceTree = "<group>"; };
 		B245CB83201C5FEA005E533A /* StarterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScene.swift; sourceTree = "<group>"; };
+		DDCF9C4F201C83100087F1EB /* StartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimation.swift; sourceTree = "<group>"; };
+		DDCF9C52201C88020087F1EB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		DDCF9C54201C880B0087F1EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		DDCF9C56201C884B0087F1EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		DDCF9C58201C922B0087F1EB /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		DDCF9C5A201C96E10087F1EB /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCF9C55201C880B0087F1EB /* CoreLocation.framework in Frameworks */,
+				DDCF9C53201C88020087F1EB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +152,7 @@
 				B245CB4A201C51BE005E533A /* Tracker watchOS App Extension */,
 				B245CB55201C51BE005E533A /* Tracker macOS */,
 				B245CB2A201C51BD005E533A /* Products */,
+				DDCF9C51201C88020087F1EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				B245CB2C201C51BD005E533A /* AppDelegate.swift */,
+				DDCF9C4F201C83100087F1EB /* StartAnimation.swift */,
+				DDCF9C56201C884B0087F1EB /* Map.swift */,
+				DDCF9C58201C922B0087F1EB /* Pin.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -217,6 +235,7 @@
 				B245CB30201C51BD005E533A /* Main.storyboard */,
 				B245CB33201C51BD005E533A /* LaunchScreen.storyboard */,
 				B245CB81201C59A2005E533A /* Launcher.sks */,
+				DDCF9C5A201C96E10087F1EB /* PinView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +273,15 @@
 				B245CB58201C51BE005E533A /* GameViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDCF9C51201C88020087F1EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDCF9C54201C880B0087F1EB /* CoreLocation.framework */,
+				DDCF9C52201C88020087F1EB /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +456,10 @@
 				B245CB2F201C51BD005E533A /* GameViewController.swift in Sources */,
 				B245CB5E201C51BE005E533A /* GameController.swift in Sources */,
 				B245CB2D201C51BD005E533A /* AppDelegate.swift in Sources */,
+				DDCF9C59201C922B0087F1EB /* Pin.swift in Sources */,
+				DDCF9C57201C884B0087F1EB /* Map.swift in Sources */,
+				DDCF9C5B201C96E10087F1EB /* PinView.swift in Sources */,
+				DDCF9C50201C83100087F1EB /* StartAnimation.swift in Sources */,
 				B245CB78201C5429005E533A /* MainViewController.swift in Sources */,
 				B245CB84201C5FEA005E533A /* StarterScene.swift in Sources */,
 			);
@@ -691,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J36M7YT83S;
 				INFOPLIST_FILE = "Tracker iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.q-charge.Tracker";
 				PRODUCT_NAME = Tracker;
@@ -709,7 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J36M7YT83S;
 				INFOPLIST_FILE = "Tracker iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.q-charge.Tracker";
 				PRODUCT_NAME = Tracker;

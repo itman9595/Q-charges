@@ -13,12 +13,22 @@
         <!--Main View Controller-->
         <scene sceneID="JIs-6m-Fxz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ASM-e0-Ve3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ss4-Cf-WlV" customClass="MainViewController" customModule="Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dQi-rG-J4J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6cu-nl-KKh">
+                                <rect key="frame" x="0.0" y="4" width="375" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-cj-FHG">
+                                <rect key="frame" x="96" y="626" width="196" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HC8-Jq-I0r" customClass="SKView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -29,9 +39,12 @@
                         <viewLayoutGuide key="safeArea" id="Bwo-ew-J0m"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="6cu-nl-KKh" id="gwm-ih-q5X"/>
                         <outlet property="skview" destination="HC8-Jq-I0r" id="Iyv-Pk-QXa"/>
+                        <outlet property="speedLabel" destination="eeD-cj-FHG" id="lDd-Pu-EbZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASM-e0-Ve3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-372" y="-54.422788605697157"/>
         </scene>
