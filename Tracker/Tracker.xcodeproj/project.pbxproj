@@ -28,6 +28,7 @@
 		B245CB64201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
 		B245CB65201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
 		B245CB66201C51BE005E533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245CB24201C51BD005E533A /* Assets.xcassets */; };
+		B245CB78201C5429005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB77201C5429005E533A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B245CB58201C51BE005E533A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B245CB5B201C51BE005E533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B245CB5D201C51BE005E533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B245CB77201C5429005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B245CB2C201C51BD005E533A /* AppDelegate.swift */,
+				B245CB77201C5429005E533A /* MainViewController.swift */,
 				B245CB2E201C51BD005E533A /* GameViewController.swift */,
 				B245CB30201C51BD005E533A /* Main.storyboard */,
 				B245CB33201C51BD005E533A /* LaunchScreen.storyboard */,
@@ -367,6 +370,7 @@
 				B245CB2F201C51BD005E533A /* GameViewController.swift in Sources */,
 				B245CB5E201C51BE005E533A /* GameController.swift in Sources */,
 				B245CB2D201C51BD005E533A /* AppDelegate.swift in Sources */,
+				B245CB78201C5429005E533A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J36M7YT83S;
 				INFOPLIST_FILE = "Tracker iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.q-charge.Tracker";
 				PRODUCT_NAME = Tracker;
@@ -645,7 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J36M7YT83S;
 				INFOPLIST_FILE = "Tracker iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.q-charge.Tracker";
 				PRODUCT_NAME = Tracker;
