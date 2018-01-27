@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20C8342201D3E320085A338 /* manDriving.dae in Resources */ = {isa = PBXBuildFile; fileRef = B20C8340201D3E310085A338 /* manDriving.dae */; };
+		B20C8343201D3E320085A338 /* manDriving.dae in Resources */ = {isa = PBXBuildFile; fileRef = B20C8340201D3E310085A338 /* manDriving.dae */; };
+		B20C8344201D3E320085A338 /* manDriving.dae in Resources */ = {isa = PBXBuildFile; fileRef = B20C8340201D3E310085A338 /* manDriving.dae */; };
+		B20C8345201D3E320085A338 /* manDriving.dae in Resources */ = {isa = PBXBuildFile; fileRef = B20C8340201D3E310085A338 /* manDriving.dae */; };
 		B245CB2D201C51BD005E533A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB2C201C51BD005E533A /* AppDelegate.swift */; };
 		B245CB2F201C51BD005E533A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB2E201C51BD005E533A /* GameViewController.swift */; };
 		B245CB32201C51BD005E533A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B245CB30201C51BD005E533A /* Main.storyboard */; };
@@ -32,6 +36,18 @@
 		B245CB80201C560E005E533A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB7F201C560E005E533A /* MainViewController.swift */; };
 		B245CB82201C59A2005E533A /* Launcher.sks in Resources */ = {isa = PBXBuildFile; fileRef = B245CB81201C59A2005E533A /* Launcher.sks */; };
 		B245CB84201C5FEA005E533A /* StarterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245CB83201C5FEA005E533A /* StarterScene.swift */; };
+		B2D23FCA201CFE6300C12C1F /* Man.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FC9201CFE6300C12C1F /* Man.dae */; };
+		B2D23FCB201CFE6300C12C1F /* Man.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FC9201CFE6300C12C1F /* Man.dae */; };
+		B2D23FCC201CFE6300C12C1F /* Man.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FC9201CFE6300C12C1F /* Man.dae */; };
+		B2D23FCD201CFE6300C12C1F /* Man.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FC9201CFE6300C12C1F /* Man.dae */; };
+		B2D23FD0201CFEAE00C12C1F /* T_Man_D.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */; };
+		B2D23FD1201CFEAE00C12C1F /* T_Man_D.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */; };
+		B2D23FD2201CFEAE00C12C1F /* T_Man_D.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */; };
+		B2D23FD3201CFEAF00C12C1F /* T_Man_D.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */; };
+		B2F691BA201D44FB00079A87 /* Car.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2F691B9201D44FB00079A87 /* Car.dae */; };
+		B2F691BB201D44FB00079A87 /* Car.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2F691B9201D44FB00079A87 /* Car.dae */; };
+		B2F691BC201D44FB00079A87 /* Car.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2F691B9201D44FB00079A87 /* Car.dae */; };
+		B2F691BD201D44FB00079A87 /* Car.dae in Resources */ = {isa = PBXBuildFile; fileRef = B2F691B9201D44FB00079A87 /* Car.dae */; };
 		DDCF9C50201C83100087F1EB /* StartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF9C4F201C83100087F1EB /* StartAnimation.swift */; };
 		DDCF9C53201C88020087F1EB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCF9C52201C88020087F1EB /* MapKit.framework */; };
 		DDCF9C55201C880B0087F1EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCF9C54201C880B0087F1EB /* CoreLocation.framework */; };
@@ -83,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B20C8340201D3E310085A338 /* manDriving.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = manDriving.dae; sourceTree = "<group>"; };
 		B245CB22201C51BD005E533A /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B245CB23201C51BD005E533A /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		B245CB24201C51BD005E533A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +125,9 @@
 		B245CB7F201C560E005E533A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B245CB81201C59A2005E533A /* Launcher.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Launcher.sks; sourceTree = "<group>"; };
 		B245CB83201C5FEA005E533A /* StarterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScene.swift; sourceTree = "<group>"; };
+		B2D23FC9201CFE6300C12C1F /* Man.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Man.dae; sourceTree = "<group>"; };
+		B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T_Man_D.png; sourceTree = "<group>"; };
+		B2F691B9201D44FB00079A87 /* Car.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Car.dae; sourceTree = "<group>"; };
 		DDCF9C4F201C83100087F1EB /* StartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimation.swift; sourceTree = "<group>"; };
 		DDCF9C52201C88020087F1EB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		DDCF9C54201C880B0087F1EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
@@ -143,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20C833F201D3E260085A338 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				B2F691B9201D44FB00079A87 /* Car.dae */,
+				B20C8340201D3E310085A338 /* manDriving.dae */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
 		B245CB1C201C51BD005E533A = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +188,8 @@
 		B245CB21201C51BD005E533A /* Tracker Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B20C833F201D3E260085A338 /* Car */,
+				B2D23FCE201CFE9F00C12C1F /* Human */,
 				B245CB22201C51BD005E533A /* GameController.swift */,
 				B245CB23201C51BD005E533A /* Art.scnassets */,
 				B245CB24201C51BD005E533A /* Assets.xcassets */,
@@ -273,6 +304,15 @@
 				B245CB58201C51BE005E533A /* GameViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2D23FCE201CFE9F00C12C1F /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				B2D23FCF201CFEAE00C12C1F /* T_Man_D.png */,
+				B2D23FC9201CFE6300C12C1F /* Man.dae */,
+			);
+			path = Human;
 			sourceTree = "<group>";
 		};
 		DDCF9C51201C88020087F1EB /* Frameworks */ = {
@@ -413,7 +453,11 @@
 			files = (
 				B245CB32201C51BD005E533A /* Main.storyboard in Resources */,
 				B245CB35201C51BD005E533A /* LaunchScreen.storyboard in Resources */,
+				B2D23FCA201CFE6300C12C1F /* Man.dae in Resources */,
+				B2F691BA201D44FB00079A87 /* Car.dae in Resources */,
 				B245CB64201C51BE005E533A /* Assets.xcassets in Resources */,
+				B2D23FD0201CFEAE00C12C1F /* T_Man_D.png in Resources */,
+				B20C8342201D3E320085A338 /* manDriving.dae in Resources */,
 				B245CB82201C59A2005E533A /* Launcher.sks in Resources */,
 				B245CB61201C51BE005E533A /* Art.scnassets in Resources */,
 			);
@@ -423,8 +467,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20C8343201D3E320085A338 /* manDriving.dae in Resources */,
 				B245CB65201C51BE005E533A /* Assets.xcassets in Resources */,
 				B245CB40201C51BD005E533A /* Interface.storyboard in Resources */,
+				B2F691BB201D44FB00079A87 /* Car.dae in Resources */,
+				B2D23FD1201CFEAE00C12C1F /* T_Man_D.png in Resources */,
+				B2D23FCB201CFE6300C12C1F /* Man.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +480,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D23FCC201CFE6300C12C1F /* Man.dae in Resources */,
+				B2F691BC201D44FB00079A87 /* Car.dae in Resources */,
+				B20C8344201D3E320085A338 /* manDriving.dae in Resources */,
 				B245CB62201C51BE005E533A /* Art.scnassets in Resources */,
+				B2D23FD2201CFEAE00C12C1F /* T_Man_D.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,9 +492,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F691BD201D44FB00079A87 /* Car.dae in Resources */,
 				B245CB5C201C51BE005E533A /* Main.storyboard in Resources */,
 				B245CB66201C51BE005E533A /* Assets.xcassets in Resources */,
+				B2D23FCD201CFE6300C12C1F /* Man.dae in Resources */,
 				B245CB63201C51BE005E533A /* Art.scnassets in Resources */,
+				B2D23FD3201CFEAF00C12C1F /* T_Man_D.png in Resources */,
+				B20C8345201D3E320085A338 /* manDriving.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
