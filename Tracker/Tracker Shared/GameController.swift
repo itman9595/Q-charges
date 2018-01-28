@@ -23,24 +23,22 @@ class GameController: NSObject, SCNSceneRendererDelegate {
     var scene: SCNScene
     let sceneRenderer: SCNSceneRenderer
     
+    
     enum mode {
         case walk
-        case bycycle
         case car
     }
     
     var motion: mode = .walk
     
+    
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
         scene = SCNScene(named: "Man.dae")!
+        
         super.init()
         
         sceneRenderer.delegate = self
-        
-//        if let ship = scene.rootNode.childNode(withName: "man", recursively: true) {
-//            ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-//        }
         
         sceneRenderer.scene = scene
         
@@ -75,36 +73,45 @@ class GameController: NSObject, SCNSceneRendererDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        let defaults = UserDefaults()
-        let avgSpeed = defaults.integer(forKey: "AvgSpeed")
-        changeMotionMode(avgSpeed: avgSpeed)
+        
+        changeMotionMode()
         
         // Called before each frame is rendered
     }
     
-    func changeMotionMode(avgSpeed: Int) {
-        print(avgSpeed)
+    func wipeOutScene() {
+        scene.rootNode.removeAllActions()
+        scene.rootNode.enumerateChildNodes { (node, stop) in
+            node.removeFromParentNode()
+        }
+    }
+    
+    func changeMotionMode() {
+        
+        let defaults = UserDefaults()
+        
+        let avgSpeed = defaults.integer(forKey: "AvgSpeed")*Int(3.6)
+        
         if avgSpeed < 10 {
             // Walk
-            if motion == mode.walk {
+            if motion != mode.walk {
                 scene = SCNScene(named: "Man.dae")!
                 sceneRenderer.scene = scene
             }
             motion = mode.walk
-        } else if avgSpeed < 40 {
-            // Bycycle
-            motion = mode.bycycle
         } else {
             // Car
-            motion = mode.car
             if motion != mode.car {
-                scene = SCNScene(named: "Car.dae")!
-                sceneRenderer.scene = scene
+                let car = SCNScene(named: "Car.dae")!
+                car.rootNode.enumerateChildNodes { (node, stop) in
+                    if node.name == "wheel" {
+                        node.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: -20, y: 0, z: 0, duration: 1)))
+                    }
+                }
+                sceneRenderer.scene = car
             }
+            motion = mode.car
         }
-        
-        
-        
     }
 
 }

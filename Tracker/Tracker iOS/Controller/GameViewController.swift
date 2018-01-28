@@ -10,10 +10,18 @@ import UIKit
 import SceneKit
 
 class GameViewController: UIViewController {
+    
+    var timer: Timer!
+    let defaults = UserDefaults()
 
-    var gameView: SCNView {
-        return self.view as! SCNView
-    }
+    @IBOutlet var gameView: SCNView!
+    
+    @IBOutlet var distance: UILabel!
+    @IBOutlet var avgSpeed: UILabel!
+    @IBOutlet var maxSpeed: UILabel!
+    @IBOutlet var minSpeed: UILabel!
+    @IBOutlet var stayTime: UILabel!
+    @IBOutlet var moveTime: UILabel!
     
     var gameController: GameController!
     
@@ -28,14 +36,23 @@ class GameViewController: UIViewController {
         // Show statistics such as fps and timing information
         self.gameView.showsStatistics = true
         
-        // Configure the view
-        self.gameView.backgroundColor = UIColor.black
+        self.gameView.backgroundColor = UIColor.init(red: 51/255, green: 153/255, blue: 1.0, alpha: 1.0)
         
         // Add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         var gestureRecognizers = gameView.gestureRecognizers ?? []
         gestureRecognizers.insert(tapGesture, at: 0)
         self.gameView.gestureRecognizers = gestureRecognizers
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(GameViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        timer.invalidate()
     }
     
     @objc
@@ -55,6 +72,16 @@ class GameViewController: UIViewController {
         } else {
             return .all
         }
+    }
+    
+    @objc func updateTimer() {
+        
+        distance.text = "Distance: \(defaults.integer(forKey: "Distance")) m"
+        avgSpeed.text = "Avg Speed: \(defaults.integer(forKey: "AvgSpeed")*Int(3.6)) km/h"
+        maxSpeed.text = "Max Speed: \(defaults.integer(forKey: "MaxSpeed")*Int(3.6)) km/h"
+        minSpeed.text = "Min Speed: \(defaults.integer(forKey: "MinSpeed")*Int(3.6)) km/h"
+        stayTime.text = "Stay Time: \(defaults.integer(forKey: "StayTime")) s"
+        moveTime.text = "Move Time: \(defaults.integer(forKey: "MoveTime")) s"
     }
     
     override func didReceiveMemoryWarning() {
